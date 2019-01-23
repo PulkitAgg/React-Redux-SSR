@@ -12,7 +12,7 @@ class News extends Component {
   }
 
   componentDidMount() {
-    if (!this.props.news) {
+    if (!this.props.data.length) {
       this.props.fetchNews();
     }
   }
