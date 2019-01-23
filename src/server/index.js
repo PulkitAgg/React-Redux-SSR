@@ -1,5 +1,4 @@
-// import express from "express";
-const express = require('express');
+import express from "express";
 // import cors from "cors";
 import { matchPath } from "react-router-dom";
 // import serialize from "serialize-javascript";
@@ -45,7 +44,7 @@ app.get("*", (req, res, next) => {
   Promise.all(promises)
     .then(() => {
       const initialData = store.getState();
-      const response = template("Server Rendered Page", initialData, render(req,store))
+      const response = template("Server Rendered Page", initialData, render(req, store))
       res.send(response);
     })
     .catch(next);
