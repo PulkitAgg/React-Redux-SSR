@@ -5,6 +5,11 @@ import wizards from "../../assests/images/wizards.jpg";
 // import "../../assests/css/newsList.css";
 
 class Home extends Component {
+  goTonews() {
+    console.log('in news');
+    this.props.history.push('/news')
+  }
+
   render() {
     return (
       <div className="home">
@@ -18,7 +23,8 @@ class Home extends Component {
           </p>
         </aside>
         <article>
-          <h1>W Combinator created a new model for funding early stage wizardry.</h1>
+          <h1 >W Combinator created a new model for funding early stage wizardry.</h1>
+          <button onClick={() => this.goTonews()}>Click</button>
           <p>
             Twice a year we invest a small amount of mana in a large number of wizards (recently
             105).
