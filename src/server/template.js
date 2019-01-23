@@ -1,9 +1,10 @@
 // html skeleton provider
+// import serialize from "serialize-javascript";
+
 export default function template(title, initialState = {}, content = "") {
     let scripts = ` <script>
                      window.__STATE__ = ${JSON.stringify(initialState)}
                   </script>
-                  <script src="/bundle.js" defer></script>
                   `
     let page = `<!DOCTYPE html>
                 <html lang="en">
@@ -20,6 +21,7 @@ export default function template(title, initialState = {}, content = "") {
                   </div>
                     ${scripts}
                 </body>
+                </html>
                 `;
     return page;
 }
