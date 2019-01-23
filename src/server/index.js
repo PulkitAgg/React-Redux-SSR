@@ -1,15 +1,13 @@
 // import express from "express";
 const express = require('express');
 // import cors from "cors";
-import React from "react";
-import { renderToString } from "react-dom/server";
-import { Provider } from "react-redux";
-import { StaticRouter, matchPath } from "react-router-dom";
+import { matchPath } from "react-router-dom";
 // import serialize from "serialize-javascript";
 import routes from "../react/routes";
 import configureStore from "../react/redux/configureStore";
-import App from "../react/App";
 // import "source-map-support/register";
+import template from "./template";
+import render from "./render";
 
 const app = express();
 
@@ -37,7 +35,6 @@ app.get("/api/news", (req, res) => {
 
 app.get("*", (req, res, next) => {
   const store = configureStore();
-
   const promises = routes.reduce((acc, route) => {
     if (matchPath(req.url, route) && route.component && route.component.initialAction) {
       acc.push(Promise.resolve(store.dispatch(route.component.initialAction())));
@@ -47,31 +44,9 @@ app.get("*", (req, res, next) => {
 
   Promise.all(promises)
     .then(() => {
-      const context = {};
-      const markup = renderToString(
-        <Provider store={store}>
-          <StaticRouter location={req.url} context={context}>
-            <App />
-          </StaticRouter>
-        </Provider>
-      );
-
       const initialData = store.getState();
-      res.send(`
-        <!DOCTYPE html>
-        <html>
-          <head>
-            <title>W Combinator</title>
-            <link rel="stylesheet" href="/css/main.css">
-            <script src="/bundle.js" defer></script>
-            <script>window.__initialData__ = ${JSON.stringify(initialData)}</script>
-          </head>
-
-          <body>
-            <div id="root">${markup}</div>
-          </body>
-        </html>
-      `);
+      const response = template("Server Rendered Page", initialData, render(req,store))
+      res.send(response);
     })
     .catch(next);
 });
