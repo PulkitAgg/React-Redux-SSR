@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assests/images/logo.png";
 import wizards from "../../assests/images/wizards.jpg";
-// import "../../assests/css/newsList.css";
+import "../../assests/css/newsList.css";
 
 class Home extends Component {
   goTonews() {

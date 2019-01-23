@@ -75,7 +75,7 @@ const serverConfig = {
         test: /\.css$/,
         use: [
           {
-            loader: "css-loader/locals"
+            loader: require.resolve('css-loader')
           }
         ]
       },
