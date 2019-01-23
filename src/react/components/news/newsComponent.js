@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import { fetchNews } from "../../redux/actions";
-import NewsList from "./NewsList";
+import { fetchNews } from "../../redux/newsReducer/actions";
+import NewsList from "./newsList";
 
 class News extends Component {
   constructor(props) {
     super(props);
-    
   }
 
   static initialAction() {
@@ -19,15 +18,9 @@ class News extends Component {
   }
 
   render() {
-    console.log('news', this.props)
     const { data } = this.props;
     return <NewsList news={data} />;
   }
 }
 
-// const mapStateToProps = state => ({
-//   news: state.news
-// });
-
-// export default connect(mapStateToProps)(News);
 export default News;

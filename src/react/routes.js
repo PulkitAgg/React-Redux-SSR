@@ -1,5 +1,5 @@
-import Home from "./containers/Home";
-import News from "./containers/News";
+import Home from "./containers/home";
+import News from "./containers/news";
 
 const routes = [
   {
