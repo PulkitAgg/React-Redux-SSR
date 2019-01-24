@@ -51,7 +51,7 @@ const browserConfig = {
 };
 
 const serverConfig = {
-  entry: "./src/server/index.js",
+  entry: ["@babel/polyfill","./src/server/bin/www"],
   target: "node",
   externals: [nodeExternals()],
   output: {
@@ -86,7 +86,7 @@ const serverConfig = {
         // use: {
 				// 	loader: 'babel-loader',
         // },
-        query: { presets: ["react","stage-2"] },
+        query: { presets: ["react","es2015","stage-2"] },
         // plugins: ["@babel/plugin-proposal-object-rest-spread"]
       }
     ]
