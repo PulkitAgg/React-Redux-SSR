@@ -2,10 +2,10 @@
  * Created by Suraj on 23/01/19.
  */
 
-require('../bootstrap');
+import '../bootstrap';
 
-import app from '../app'
-var http = require('http');
+import app from '../app';
+import http from 'http';
 
 /**
  * Get port from environment and store in Express.

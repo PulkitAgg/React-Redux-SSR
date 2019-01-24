@@ -8,15 +8,12 @@ import bodyParser   from 'body-parser';
 import http from 'http'
 import routes from './app/routes/routes';
 import apiRpoutes from './app/routes/apiRoutes';
-// var express = require('express');
-// var morgan = require('morgan');
-// var bodyParser = require('body-parser');
-// var http = require('http');
+
 var app = express();
 // import reactroutes from "./routes/reactRoutes";
 
 
-const winston = require('winston');
+import winston from 'winston';
 const tsFormat = () => (new Date()).toLocaleTimeString();
 const logger = new (winston.Logger)({
   transports: [
@@ -58,7 +55,6 @@ app.use("/", routes);
 // app.get("*", (req,res) => {
 // 	res.json({a:1})
 // })
-// app.use('/api', require('./app/routes/routes'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
