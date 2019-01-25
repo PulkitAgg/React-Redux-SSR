@@ -11,7 +11,6 @@ const newsError = () => ({ type: FETCH_NEWS_FAILURE });
 export const fetchNews = () => (dispatch, getState) => {
   dispatch(showLoader());
   return fetch(URLS.news)
-    .then(response => response.json())
     .then(news => {
       dispatch(hideLoader());
       dispatch(receivedNews(news))
