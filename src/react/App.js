@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import routes from "./routes";
 import "./assests/css/app.css";
+import unregister from "./interceptor";
 
 class App extends Component {
   render() {
