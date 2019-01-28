@@ -13,7 +13,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
+    "flat-cache": "^2.0.1",
     "isomorphic-fetch": "^2.2.1",
+    "memory-cache": "^0.2.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",

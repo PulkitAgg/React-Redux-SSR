@@ -1,0 +1,237 @@
+https://4y22p4r523.execute-api.ap-south-1.amazonaws.com/dev/cc/getcommonmaster
+{
+    
+    "mastertype":"BusinessType"
+}
+
+
+https://4y22p4r523.execute-api.ap-south-1.amazonaws.com/dev/cc/customerregistration
+
+{
+	"name":"ppp",
+	"emailid":"nilesh.patil123@bajajcapital.com",
+	"mobileno":"9876543211",
+	"pincode":"400001",
+	"income":"50000",
+	"otp":"123456",
+    "message":"received from login ID on. For queries new",
+	"companyid":"1",
+	"companyname":"Nilesh Copam",
+	"employeecategory":"1",
+	"emptype":"",
+	"latlong":"111.22",
+	"macaddress":"mac",
+	"browser":"ie",
+	"os":"window",
+	"source":"web",
+	"createdby":"1",
+	"createdip":"192.12.22.123"
+
+}
+
+https://4y22p4r523.execute-api.ap-south-1.amazonaws.com/dev/cc/getcustomerinfo
+
+req:
+{
+	"customerid":"7",
+	"mobileno":"9870117204"
+
+}
+
+https://4y22p4r523.execute-api.ap-south-1.amazonaws.com/dev/cc/getoffers
+
+req:
+{
+  "customerid": 1,
+  "pincode":"400001",
+  "income":"40000"
+  
+}
+
+https://4y22p4r523.execute-api.ap-south-1.amazonaws.com/dev/cc/customerverification
+
+req:
+
+{
+	"customerid":"2",
+	"name":"ppp",
+	"emailid":"nilesh.patil123@bajajcapital.com",
+	"mobileno":"9876543211",
+	"pincode":"400001",
+	"income":"50000",
+	"otp":"123456",
+	"latlong":"111.22",
+	"macaddress":"mac",
+	"browser":"ie",
+	"os":"window",
+	"source":"web",
+	"createdby":"1",
+	"createdip":"192.12.22.123"
+}
+
+https://4y22p4r523.execute-api.ap-south-1.amazonaws.com/dev/cc/createapplication
+req:
+{
+	"customerid":"2",
+	"bankid":"10",
+	"statusid":"3",
+	"offerid":"21",
+	"income":"43000",
+	"pincode":"423556",
+	"latlong":"19.33",
+	"macaddress":"2:33:34",
+	"browser":"chrome",
+	"os":"windows",
+	"source":"web",
+	"createdby":"2",
+	"createdip":"192.12.22.123"
+
+}
+
+https://4y22p4r523.execute-api.ap-south-1.amazonaws.com/dev/cc/updateapplication
+
+req:
+
+{
+	"applicationid":"10",
+	"customerid":"2",
+	"statusid":"5",
+	"modifiedby":"3",
+	"modifiedip":"123.33.4.3"
+	
+
+}
+
+
+https://4y22p4r523.execute-api.ap-south-1.amazonaws.com/dev/cc/createcustomerprofile
+
+req:
+{
+
+        "name" :"",
+        "emailid":"",
+        "mobileno":"",
+        "pancard":"",
+        "DOB":"",
+        "prefix" :"",
+        "gender" :"",
+        "customerid" :"",
+        "companyname" :"",
+        "compnayid":"",
+        "qualificationid":"",
+        "residenceaddress1":"",
+        "residenceaddress2" :"",
+        "residenceaddress3" :"",
+        "resicity":"",
+        "resipin":"",
+        "resiphone" :"",
+        "resistate":"",
+        "resistdcode":"",
+        "occupationtype":"",
+        "designation":"",
+        "natureofbusiness":"",
+        "officeaddress1":"",
+        "officeaddress2":"",
+        "officeaddress3":"",
+        "officephone":"",
+        "officestdcode":"",
+        "officepin":"",
+        "officestate":"",
+        "officecity":"",
+        "yearsofcurrentemployment":"",
+        "fathersname":"",
+        "mothersmaidenname":"", 
+        "resilandmark":"",
+        "officelandmark" :"",
+        "createdby" :"",
+        "createdip" :"",
+		"adhaarcard" :"",
+		"applicationid" :"",
+		"existingcreditcardlist" :"",
+		"isexistingloan" :"",		
+        "latlong":"",
+        "macaddress" :"",
+        "browser":"",
+        "os":"",
+        "source":""
+}
+        
+
+https://4y22p4r523.execute-api.ap-south-1.amazonaws.com/dev/cc/getcardfeatures
+
+req:
+{
+	"offerlist":""
+}
+
+
+
+
+https://4y22p4r523.execute-api.ap-south-1.amazonaws.com/dev/cc/sendsms
+req:
+
+{
+	"mobileno":"9870771973",
+	"smstype":"reg",
+	"message":"received from login ID on. For queries new",
+	"latlong":"111.22",
+	"macaddress":"mac",
+	"browser":"ie",
+	"os":"window",
+	"source":"web",
+	"createdby":"1",
+	"createdip":"192.12.22.123"
+}
+
+resp:
+
+{
+    "message": "Command executed successfully!",
+    "status": 200,
+    "err": "-",
+    "result": [
+        {
+            "o_errcode": 200,
+            "o_errdesc": "Success",
+            "smsid": 55
+        }
+    ],
+    "resultinfo": "-"
+}
+
+
+https://4y22p4r523.execute-api.ap-south-1.amazonaws.com/dev/cc/getpincode
+
+
+https://4y22p4r523.execute-api.ap-south-1.amazonaws.com/dev/cc/getcitybypincode
+req:
+{
+	"pincode":"110002"
+}
+
+https://4y22p4r523.execute-api.ap-south-1.amazonaws.com/dev/cc/updatemobilenobycustid
+req:
+{
+	"customerid":"1",
+	"mobileno":"999999999"
+}
+
+https://4y22p4r523.execute-api.ap-south-1.amazonaws.com/dev/cc/updateotpbycustid
+
+req:
+{
+	"customerid":"1",
+	"otp":"22222"
+}
+
+Get : 
+ https://4y22p4r523.execute-api.ap-south-1.amazonaws.com/dev/cc/getbank
+
+
+https://4y22p4r523.execute-api.ap-south-1.amazonaws.com/dev/cc/getcardviewdetails
+Req : 
+{	
+	"offerid":"17"	
+}
+
+

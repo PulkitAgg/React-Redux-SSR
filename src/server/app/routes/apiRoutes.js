@@ -3,6 +3,8 @@
  */
 import express from 'express'
 var router = express.Router();
+import cacheMiddleware from './cacheService'
+
 // var fileParse = require('../middlewares/passFile');
 
 import reqQuestionFilter from'./reqFilters/user';
@@ -10,7 +12,7 @@ import reqQuestionFilter from'./reqFilters/user';
 // import userController from '../modules/controllers/ssrControllers/reactControllers';
 
 router.route('/news')
-  .get(reqQuestionFilter.FetchUserInfo);
+  .get(cacheMiddleware(30),reqQuestionFilter.FetchUserInfo);
 
 // router.route('*')
 //   .get(reqQuestionFilter.serverPages);

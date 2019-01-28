@@ -1,0 +1,229 @@
+
+URL : http://localhost:7000/Creditcard/getoffers
+Input : {
+  "customerid": 1,
+  "pincode":"110002",
+    "income":"30000"
+}
+
+Output : 
+=======
+=================== Createapplication ================
+URL: http://localhost:7000/creditcard/createapplication
+
+Input:
+{
+	"customerid":"2",
+	"bankid":"11",
+	"statusid":"3",
+	"offerid":"21",
+	"income":"23000",
+	"pincode":"423556",
+	"latlong":"19.33",
+	"macaddress":"2:33:34",
+	"browser":"chrome",
+	"os":"windows",
+	"source":"web",
+	"createdby":"2",
+	"createdip":"192.12.22.123"
+
+}
+
+OutPut:
+
+{
+    "code": 200,
+    "message": "Success",
+    "result": [
+        {
+            "o_errcode": 200,
+            "o_errdesc": "Success"
+        }
+    ]
+}
+
+============================= Update application ==================================
+URL: http://localhost:7000/creditcard/updateapplication
+
+Input:
+
+{
+	"applicationid":"3",
+	"customerid":"0",
+	"statusid":"5",
+	"modifiedby":"3",
+	"modifiedip":"123.33.4.3"
+	
+
+}
+
+Output:
+
+{
+    "code": 200,
+    "message": "Success",
+    "result": [
+        {
+            "o_errcode": 200,
+            "o_errdesc": "Success"
+        }
+    ]
+}
+
+====================Get Customerinfo====================
+URL: http://localhost:7000/creditcard/getcustomerinfo
+
+Input:
+{
+	"customerid":"1",
+	"mobileno":"9870117204"
+
+}
+
+OutPut:
+{
+    "code": 200,
+    "message": "Success",
+    "result": [
+        {
+            "customerid": 1,
+            "NAME": "pp",
+            "emailid": "PP@GMAIL.COM",
+            "isemailverify": "N",
+            "mobileno": "9870117204",
+            "ismobilevwerify": "Y",
+            "pincode": "",
+            "income": "",
+            "pancard": "",
+            "DOB": "",
+            "ccstatus": 1,
+            "companyname": ""
+        }
+    ]
+}
+
+OR  
+
+{
+    "code": -100,
+    "message": "No record found",
+    "result": ""
+}
+
+http://localhost:7000/creditcard/customerregistration
+{
+	"name":"ppp",
+	"emailid":"nilesh.patil123@bajajcapital.com",
+	"mobileno":"9876543211",
+	"pincode":"400001",
+	"income":"50000",
+	"otp":"123456",
+    "message":"received from login ID on. For queries new",
+	"latlong":"111.22",
+	"macaddress":"mac",
+	"browser":"ie",
+	"os":"window",
+	"source":"web",
+	"createdby":"1",
+	"createdip":"192.12.22.123"
+}
+
+response:
+{
+    "code": 200,
+    "message": "Success",
+    "result": [
+        {
+            "customerid": 2,
+            "NAME": "ppp",
+            "emailid": "nilesh.patil123@bajajcapital.com",
+            "isemailverify": "N",
+            "mobileno": "9876543211",
+            "ismobilevwerify": "N",
+            "pincode": "400001",
+            "income": "50000",
+            "pancard": "",
+            "DOB": "",
+            "ccstatus": 1,
+            "companyname": ""
+        }
+    ]
+}
+
+http://localhost:7000/creditcard/customerverification
+{
+	"customerid":"2",
+	"name":"ppp",
+	"emailid":"nilesh.patil123@bajajcapital.com",
+	"mobileno":"9876543211",
+	"pincode":"400001",
+	"income":"50000",
+	"otp":"123456",
+	"latlong":"111.22",
+	"macaddress":"mac",
+	"browser":"ie",
+	"os":"window",
+	"source":"web",
+	"createdby":"1",
+	"createdip":"192.12.22.123"
+}
+
+response:
+{
+    "code": 200,
+    "message": "Success",
+    "result": [
+        {
+            "customerid": 2,
+            "NAME": "ppp",
+            "emailid": "nilesh.patil123@bajajcapital.com",
+            "isemailverify": "N",
+            "mobileno": "9876543211",
+            "ismobilevwerify": "Y",
+            "pincode": "400001",
+            "income": "50000",
+            "pancard": "",
+            "DOB": "",
+            "ccstatus": 1,
+            "companyname": ""
+        }
+    ]
+}
+
+{
+    "code": -1,
+    "message": "Invalid otp",
+    "result": ""
+}
+
+=====================Get SMS==================
+URL : http://localhost:7000/creditcard/getsms
+
+Input:
+
+{
+	"mobileno":"9870117204",
+	"otp":"23456",
+	"message":"received from login ID on. For queries new",
+	"latlong":"111.22",
+	"macaddress":"mac",
+	"browser":"ie",
+	"os":"window",
+	"source":"web",
+	"createdby":"1",
+	"createdip":"192.12.22.123"
+}
+
+Output:
+{
+    "code": "200",
+    "message": "Success",
+    "result": ""
+}
+
+OR
+{
+    "code": "14",
+    "message": "Error in SMS sending",
+    "result": ""
+}
