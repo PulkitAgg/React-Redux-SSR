@@ -14,6 +14,8 @@ import reqQuestionFilter from'./reqFilters/user';
 router.route('/news')
   .get(cacheMiddleware(30),reqQuestionFilter.FetchUserInfo);
 
+router.route('/getCustomerData/:name')
+  .get(reqQuestionFilter.getCustomerDataByProcedure);
 // router.route('*')
 //   .get(reqQuestionFilter.serverPages);
 //Questions route

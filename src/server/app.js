@@ -8,6 +8,7 @@ import bodyParser   from 'body-parser';
 import http from 'http'
 import routes from './app/routes/routes';
 import apiRpoutes from './app/routes/apiRoutes';
+import procedure from "./procedure"; // for running the script
 
 var app = express();
 // import reactroutes from "./routes/reactRoutes";
