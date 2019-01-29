@@ -3,7 +3,7 @@
  */
 import express from 'express'
 var router = express.Router();
-import cacheMiddleware from './cacheService'
+import redisMiddleware from './cacheService'
 
 // var fileParse = require('../middlewares/passFile');
 
@@ -12,7 +12,7 @@ import reqQuestionFilter from'./reqFilters/user';
 // import userController from '../modules/controllers/ssrControllers/reactControllers';
 
 router.route('/news')
-  .get(cacheMiddleware(30),reqQuestionFilter.FetchUserInfo);
+  .get(redisMiddleware,reqQuestionFilter.FetchUserInfo);
 
 router.route('/getCustomerData/:name')
   .get(reqQuestionFilter.getCustomerDataByProcedure);
