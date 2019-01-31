@@ -9,7 +9,7 @@ const browserConfig = {
     path: __dirname,
     filename: "./public/bundle.js"
   },
-  devtool: "cheap-module-source-map",
+  devtool: "source-map",
   module: {
     rules: [
       {
@@ -59,7 +59,7 @@ const serverConfig = {
     filename: "server.js",
     libraryTarget: "commonjs2"
   },
-  devtool: "cheap-module-source-map",
+  devtool: "source-map",
   module: {
     rules: [
       {
