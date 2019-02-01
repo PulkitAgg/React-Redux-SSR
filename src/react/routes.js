@@ -1,5 +1,6 @@
 import Home from "./containers/home";
 import News from "./containers/news";
+import NotFound from "./components/notFound/notFoundComponent";
 
 const routes = [
   {
@@ -10,6 +11,9 @@ const routes = [
   {
     path: "/news",
     component: News
+  },{
+    path:'/*',
+    component: NotFound
   }
 ];
 

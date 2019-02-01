@@ -19,5 +19,6 @@ router
     // .get('/api/news', reqQuestionFilter.FetchUserInfo)
     .get('/', reqQuestionFilter.serverPages)
     .get('/news', reqQuestionFilter.serverPages)
+    .get('/*', reqQuestionFilter.serverPages)
 export default router;
 // module.exports = router;
